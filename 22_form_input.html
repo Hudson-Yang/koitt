@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+	<title>여러가지 입력요소들</title>
+   </head>
+   <body>
+	<h1>여러가지 입력요소들</h1>
+	<form action="xxxx.xxx" method="get">
+		<h2>글자 입력</h2>
+		<input type="text" name="nickname" size="55"/>
+
+		<h2>암호 입력</h2>
+		<input type="password" name="pwd" size="55"/>
+
+		<h2>한개만 선택하는 입력지 : radio</h2>
+		<input type="radio" id="female" name="gender" checked value="F"/>
+		<label for="female">여자</label>
+		<input type="radio" id="male" name="gender" value="M"/>
+		<label for="male">남자</label>
+
+		<h2>여러개 선택하는 선택지 : checkbox </h2>
+		<h3>취미선택</h3>
+		<input type="checkbox" id="game" name="hobby" value="game"/>
+		<label for="game">게임</label>
+		<input type="checkbox" id="reading" name="hobby" value="reading"/>
+		<label for="reading">독서</label>
+		<input type="checkbox" id="movie" name="hobby" value="movie"/>
+		<label for="movie">영화감상</label>
+		<input type="checkbox" id="sleeping" name="hobby" value="sleeping"/>
+		<label for="sleeping">잠자기</label>
+
+		<h2>여러줄 문장입력 : textarea</h2>
+		<h3>프로필 글</h3>
+		<textarea cols="28" rows="5">가나다라마바사아자차카타파하</textarea>
+
+		<h2>파일선택</h2>
+		<input type="file"/>
+	</form>
+   </body>
+</html>

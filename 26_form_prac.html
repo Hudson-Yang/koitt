@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+	<title>연습문제</title>
+   </head>
+   <body>
+	개인 프로필 입력
+	<form name="info" method="POST" action="???">
+	<table border="1" >
+		<tr>
+			<th colspan="2">여러분의 개인 정보를 입력하세요.</th>
+		</tr>
+		<tr>
+			<td align="center">이름</td>
+			<td><input type="text" name="name"/></td>
+		</tr>
+		<tr>
+			<td align="center">주민번호</td>
+			<td><input type="text" name="jumin" maxlength="6"> - <input type="password" maxlength="7"></td>
+		</tr>
+		<tr>
+			<td align="center">성별</td>
+			<td><input type="radio" name="gen" value="M"/>남자<input type="radio" name="gen" value="F"/>여자</td>
+		</tr>
+		<tr>
+			<td align="center">사진</td>
+			<td><input type="file" name="file"/></td>
+		</tr>
+		<tr>
+			<td align="center">주소</td>
+			<td><input type="text" name="addr" size="50" maxlength="50"/></td>
+		</tr>
+		<tr>
+			<td align="center">전화번호</td>
+			<td><select name="phone">
+				<option value="02">서울 02</option>
+				<option value="031">경기 031</option>
+				<option value="032">인천 032</option>
+				<option value="062">광주 062</option>
+			</select> - <input name="phone1" type="text" maxlength="4"/> - <input type="text" name="phone2" maxlength="4"/>
+			</td>
+		</tr>
+				<tr>
+			<td align="center">휴대폰</td>
+			<td><select name="sphone">
+				<option value="010">010</option>
+				<option value="011">011</option>
+				<option value="016">016</option>
+				<option value="017">017</option>
+			</select>
+			 - <input name="sphone1" type="text" maxlength="4"/> - <input type="text" name="sphone2" maxlength="4"/>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">이메일</td>
+			<td>
+				<input type="text" name="email1"/>@
+				<select name="email2">
+					<option value="naver">네이버</option>
+					<option value="daum">다음</option>
+					<option value="google">구글</option>
+					<option value="yahoo">야후</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">학습과목</td>
+			<td>
+				<input type="checkbox" name="checkbox" value="html"/>HTML
+				<input type="checkbox" name="checkbox" value="css"/>CSS
+				<input type="checkbox" name="checkbox" value="java"/>JAVA
+				<input type="checkbox" name="checkbox" value="basis"/>Basis
+				<input type="checkbox" name="checkbox" value="struth2"/>Struth2
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="2" align="center">자기소개</td>
+			<td><textarea name="jang" cols="30" rows="10">장점을 작성하세요.</textarea></td>
+		</tr>
+		<tr>
+			<td><textarea name="dan" cols="30" rows="10">단점을 작성하세요.</textarea></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center">
+				<input type="submit" value="가입">
+				<input type="button" value="취소">
+			</td>
+		</tr>
+	</table>
+	</form>
+   </body>
+</html>
