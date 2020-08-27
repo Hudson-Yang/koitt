@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title></title>
+<style type="text/css">
+	*{margin:0;padding:0;}
+	.g h1, .g h2, .g p{text-align:center;}
+	.g p img{vertical-align:center;}
+</style>
+<script language="javascript">
+<!--
+	var img = new Array();
+	var imgNum = 8;
+
+	for( i=0; i<imgNum ; i++){
+		img[i] = "36_panda_0"+(i+1)+".jpg";		
+	}
+	var a=0;
+	function prevBtn(){
+		a--;
+		if( a<0 ){
+			a = img.length -1;
+		}
+		document.getElementById("gimg").src = img[a];
+		document.getElementById("gtitle").innerHTML="»çÁø"+(a+1);
+		return false;
+	}
+	
+	function nextBtn(){
+		a++;
+		if(img.length-1<a){
+			a=0;
+		}
+		document.getElementById("gimg").src = img[a];
+		document.getElementById("gtitle").innerHTML="»çÁø"+(a+1);	
+		return false;
+	}	
+//-->
+</script>
+</head>
+<body class="g">
+	<h1>ÄôÇªÆÒ´õ °¶·¯¸®</h1>
+	<h2 id="gtitle"> »çÁø1 </h2>
+	<p>
+		<a href="#" onClick="prevBtn()"><img src="36_left.png" width="200" height="200" /></a>
+		<img src="36_panda_01.jpg" width="300" height="300" id="gimg"/>
+		<a href="#" onClick="nextBtn()"><img src="36_right.jpg" width="200" height="200" /></a>
+	</p>
+	
+</body>
+</html>

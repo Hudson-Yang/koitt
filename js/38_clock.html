@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title></title>
+<script language="javascript">
+<!--
+	function dptime(){
+		now = new Date();
+		hours = now.getHours();
+		minutes = now.getMinutes();
+		seconds = now.getSeconds();
+		
+		var ampm;
+		if(hours <= 12){
+			ampm = "오전";
+		} else{
+			ampm = "오후";
+			hours -= 12;
+		}
+		if(hours < 10){
+			hours = "0" + hours;
+		}
+		if(minutes < 10){
+			minutes = "0" + minutes;
+		}
+		if(seconds < 10){
+			seconds = "0" + seconds;
+		}
+		document.getElementById("dptime").innerHTML = ampm+hours + ":" + minutes + ":" + seconds;
+	}
+	setInterval("dptime()",1);
+//-->
+</script>
+</head>
+<body>
+	<div class="la">
+		<span id="dptime"></span>
+	</div>
+</body>
+</html>
