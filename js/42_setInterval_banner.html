@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title></title>
+<script language="javascript">
+<!--
+	var photos=new Array();
+	photos[0]="42_food1.jpg";
+	photos[1]="42_food2.png";
+	photos[2]="42_food3.jpg";
+	photos[3]="42_food4.jpg";
+
+	var sNum=0;
+	function viewPhoto(id){
+		sNum=id;
+		//선택된 이미지 photoslider에 넣기
+		document.images.photoslider.src=photos[sNum];
+		for(i=0 ; i<photos.length ; i++){
+			document.getElementById('pn'+i).src="42_blk_dot.png";
+		}
+		//선택된 이미지 버튼 색상 변경
+		document.getElementById('pn'+sNum).src="42_red_dot.png";
+	}
+
+	setInterval("startScroll()",1500);
+	function startScroll(){
+		viewPhoto(sNum);
+		sNum++;
+		if(sNum>photos.length-1){
+			sNum=0;
+		}
+	}
+//-->
+</script>
+</head>
+<body onload="viewPhoto('0')">
+	<form name="photo">
+		<input type="hidden" name="count" value="0"/>
+	</form>
+	<p>
+		<img src="42_blk_dot.png" id="pn0" onmouseover="viewPhoto('0')" alt="첫번째버튼"/>
+		<img src="42_blk_dot.png" id="pn1" onmouseover="viewPhoto('1')" alt="두번째번튼"/>
+		<img src="42_blk_dot.png" id="pn2" onmouseover="viewPhoto('2')" alt="세번째버튼"/>
+		<img src="42_blk_dot.png" id="pn3" onmouseover="viewPhoto('3')" alt="네번째버튼"/>
+	</p>
+	<script language="javascript">
+		document.write('<img src="'+photos[0]+'" name="photoslider" width="600" height="510"/>')
+	</script> 
+
+</body>
+</html>
